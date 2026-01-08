@@ -13,49 +13,73 @@ description: 專為私人社群打造的楓之谷數據查詢機器人
 ## ✨ 功能介紹與指令 (Features & Commands)
 
 本機器人透過指令觸發，一次性整合多個 API 端點的數據。
-![指令](./image/command.png)
+* **Command:** `/角色資訊_查詢 角色名稱:[角色名稱]`
+
+![指令](image/command.png)
 
 ### 1. 角色綜合概況 (Character Profile)
-查詢角色的基本素質、戰鬥力、聯盟等級、性向系統等核心數據。
-* **API Endpoints:** `Basic`, `Stat`, `Propensity`, `Ability`
-* **Command:** `/character_info [IGN]`
+查詢角色的基本素質、戰鬥力、戰地等級、等核心數據。
+* **API Endpoints:** `basic`, `dojang`, `stat`, `union`
 
-![角色概況](basic_info.jpg)
-*(請確認檔名是否與上傳的一致)*
+![角色概況](image/basic_info.png)
 
-### 2. 裝備與套裝分析 (Equipment & Set Effect)
-詳細列出角色當前穿戴的裝備、潛能等級，以及觸發的套裝效果。同時包含祕法符文 (Arcane/Sacred Symbols) 的詳細等級。
-* **API Endpoints:** `Item Equipment`, `Set Effect`, `Symbol`, `Android`
+### 2. 經驗歷史 (Exp History)
+列出角色近7日的經驗值，30、60、90日以來的經驗總獲得量。
+* **API Endpoints:** `basic`
 
-![裝備分析](equip.jpg)
+![經驗歷史](image/exp.png)
 
-### 3. 技能與矩陣系統 (Skill Progression)
-完整展示 V 矩陣 (5轉) 與 HEXA 矩陣 (6轉) 的核心等級與進度，以及連結技能 (Link Skill) 配置。
-* **API Endpoints:** `Vmatrix`, `Hexamatrix`, `Link Skill`
+### 3. 連結技能 (Link Skill)
+詳細列出角色自身與套用的連結技能。
+* **API Endpoints:** `link-skill`
 
-![技能矩陣](matrix.jpg)
+![連結技能](image/link_skill.png)
 
-### 4. 外觀與點裝 (Fashion & Beauty)
-展示角色的髮型、臉型、皮膚以及點數裝備搭配。
-* **API Endpoints:** `Beauty`, `Cash Item Equipment`
+### 4. 內在潛能 (Ability)
+詳細列出角色當前穿戴的內在潛能，可切換預設套。
+* **API Endpoints:** `ability`
 
-![外觀點裝](cash.jpg)
+![內在潛能](image/ability.png)
 
-### 5. 武陵道場紀錄 (Dojo Record)
-查詢該角色的武陵道場最佳樓層與通關時間紀錄。
-* **API Endpoints:** `Dojang`
+### 5. 裝備 (Equipment)
+詳細列出角色當前穿戴的裝備、能力值、潛能，可切換預設套。
+* **API Endpoints:** `item-equipment`, `pet-equipment`
 
-![武陵紀錄](dojo.jpg)
+![裝備](image/equipment.png)
+
+### 6. 六轉 (Hexa)
+詳細列出角色的技能、精通、強化、共用核心等級，並計算六轉含共用與不含共用核心的靈魂與碎片進度。
+
+詳細列出角色的屬性核心。
+* **API Endpoints:** `hexamatrix`, `hexamatrix-stat`
+
+![六轉技能](image/hexa_skill.png)
+
+![六轉屬性](image/hexa_stat.png)
+
+### 7. 造型 (Cashitem)
+詳細列出角色當前穿戴的時裝，可切換預設套。
+
+詳細列出角色的髮型、臉型、皮膚。
+
+詳細列出角色的特殊時裝(限定神之子與天使破壞者)。
+* **API Endpoints:** `cashitem-equipment`, `beauty_equipment`
+
+![時裝](image/cash_equipment.png)
+
+![頭/臉](image/beauty.png)
+
+![特殊時裝](image/additional_cash_equipment.png)
 
 ---
 
 ## ⚙️ 技術架構 (Technical Info)
 
-* **Language:** Python 3.10+
-* **Library:** Discord.py (Async)
+* **Language:** Python 3.13
+* **Library:** Discord.py
 * **Data Source:** NEXON Open API
 
 由於單一查詢指令包含大量數據聚合，**需要較高的瞬間並發請求額度 (Burst Rate)** 以確保回應速度與使用者體驗。
 
 ---
-*Last Updated: 2024*
+*Last Updated: 2026*
