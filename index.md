@@ -19,19 +19,16 @@ description: 專為私人社群打造的楓之谷數據查詢機器人
 
 ### 1. 角色綜合概況 (Character Profile)
 查詢角色的基本素質、戰鬥力、戰地等級、等核心數據。
-* **API Endpoints:** `basic`, `dojang`, `stat`, `union`
 
 ![角色概況](image/basic_info.png)
 
 ### 2. 經驗歷史 (Exp History)
 列出角色近7日的經驗值，30、60、90日以來的經驗總獲得量。
-* **API Endpoints:** `basic`
 
 ![經驗歷史](image/exp.png)
 
 ### 3. 連結技能 (Link Skill)
 詳細列出角色自身與套用的連結技能。
-* **API Endpoints:** `link-skill`
 
 ![連結技能](image/link_skill.png)
 
@@ -43,31 +40,28 @@ description: 專為私人社群打造的楓之谷數據查詢機器人
 
 ### 5. 裝備 (Equipment)
 詳細列出角色當前穿戴的裝備、能力值、潛能，可切換預設套。
-* **API Endpoints:** `item-equipment`, `pet-equipment`
 
 ![裝備](image/equipment.png)
 
 ### 6. 六轉 (Hexa)
 詳細列出角色的技能、精通、強化、共用核心等級，並計算六轉含共用與不含共用核心的靈魂與碎片進度。
 
-詳細列出角色的屬性核心。
-* **API Endpoints:** `hexamatrix`, `hexamatrix-stat`
-
 ![六轉技能](image/hexa_skill.png)
+
+詳細列出角色的屬性核心。
 
 ![六轉屬性](image/hexa_stat.png)
 
 ### 7. 造型 (Cashitem)
 詳細列出角色當前穿戴的時裝，可切換預設套。
 
-詳細列出角色的髮型、臉型、皮膚。
-
-詳細列出角色的特殊時裝(限定神之子與天使破壞者)。
-* **API Endpoints:** `cashitem-equipment`, `beauty_equipment`
-
 ![時裝](image/cash_equipment.png)
 
+詳細列出角色的髮型、臉型、皮膚。
+
 ![頭/臉](image/beauty.png)
+
+詳細列出角色的特殊時裝(限定神之子與天使破壞者)。
 
 ![特殊時裝](image/additional_cash_equipment.png)
 
@@ -78,8 +72,6 @@ description: 專為私人社群打造的楓之谷數據查詢機器人
 * **Language:** Python 3.13
 * **Library:** Discord.py
 * **Data Source:** NEXON Open API
-
-由於單一查詢指令包含大量數據聚合，**需要較高的瞬間並發請求額度 (Burst Rate)** 以確保回應速度與使用者體驗。
 
 ---
 *Last Updated: 2026*
