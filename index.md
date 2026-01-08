@@ -1,6 +1,6 @@
 ---
-layout: default
-title: MapleStory Discord Assistant
+layout: 小哈的分靈
+title: 小哈的分靈 - 指令介紹
 description: 專為私人社群打造的楓之谷數據查詢機器人
 ---
 
