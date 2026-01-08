@@ -4,28 +4,16 @@ title: 小哈的分靈 - 指令介紹
 description: 專為私人社群打造的楓之谷數據查詢機器人
 ---
 
-# 🍁 Maplestory Discord Assistant (私人社群專用)
+# 🍁 小哈的分靈
 
 這是一個專為私人 Discord 伺服器設計的楓之谷 (Maplestory) 數據查詢機器人。透過整合 Nexon Open API，提供即時、詳細的角色數據分析與歷史紀錄追蹤。
-
-[GitHub Repository (Private Code)] | [Documentation]
-
----
-
-## 📋 Note for Nexon API Reviewer (給審核員的說明)
-
-> **Important regarding Launch Stage Application:**
->
-> This bot is designed to fetch a **complete snapshot** of a character's profile in a single user command.
-> To generate the reports shown below, the bot must trigger **over 10+ simultaneous API requests** (Basic info, Stat, Equipment, Cash items, Symbols, V-Matrix, Hexa-Matrix, Dojo record, etc.).
->
-> The Development Phase limit (5 req/sec) results in timeouts and incomplete data rendering during these burst operations. We strictly use the API for user-requested queries within our private community.
 
 ---
 
 ## ✨ 功能介紹與指令 (Features & Commands)
 
 本機器人透過指令觸發，一次性整合多個 API 端點的數據。
+![指令](./image/command.png)
 
 ### 1. 角色綜合概況 (Character Profile)
 查詢角色的基本素質、戰鬥力、聯盟等級、性向系統等核心數據。
